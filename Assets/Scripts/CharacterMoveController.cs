@@ -19,12 +19,14 @@ public class CharacterMoveController : MonoBehaviour
     public LayerMask groundLayerMask;
 
     private Animator anim;
+    private CharacterSoundController sound;
 
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<CharacterSoundController>();
     }
 
     private void FixedUpdate()
@@ -62,6 +64,7 @@ public class CharacterMoveController : MonoBehaviour
             if (isOnGround)
             {
                 isJumping = true;
+                sound.PlayJump();
             }
         }
         anim.SetBool("isOnGround", isOnGround);
