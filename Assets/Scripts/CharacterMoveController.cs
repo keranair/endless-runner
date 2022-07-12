@@ -38,6 +38,7 @@ public class CharacterMoveController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sound = GetComponent<CharacterSoundController>();
+        gameCamera.enabled = true;
     }
 
     private void FixedUpdate()
