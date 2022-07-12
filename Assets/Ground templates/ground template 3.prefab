@@ -338,8 +338,8 @@ GameObject:
   - component: {fileID: 1389768191914865646}
   - component: {fileID: 1389768191914865644}
   - component: {fileID: 1389768191914865645}
-  - component: {fileID: 1389768191914865642}
-  - component: {fileID: 1389768191914865643}
+  - component: {fileID: -6293847673910823433}
+  - component: {fileID: 7037960241015573295}
   m_Layer: 0
   m_Name: ground template 3
   m_TagString: Untagged
@@ -410,7 +410,7 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
---- !u!114 &1389768191914865642
+--- !u!114 &-6293847673910823433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -419,32 +419,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389768191914865647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e7aeb2cfff7a6439eb33e37c9bc12a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3301c54b69dd685439ed7ca59dfb5a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainTemplates: []
-  terrainTemplateWidth: 0
-  mainCamera: {fileID: 0}
-  areaStartOffset: 0
-  areaEndOffset: 0
---- !u!114 &1389768191914865643
+--- !u!114 &7037960241015573295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389768191914865647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e7aeb2cfff7a6439eb33e37c9bc12a, type: 3}
+  m_Script: {fileID: 11500000, guid: 29800cacdb7567b4a95fac9fbb802a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   terrainTemplates:
-  - {fileID: 1389768191914865642}
-  terrainTemplateWidth: 0
-  mainCamera: {fileID: 1460279231594847641, guid: c0d7f2c83c231a640a2032cc3873b5bf, type: 3}
+  - {fileID: -6293847673910823433}
+  terrainTemplateWidth: 8.89
+  gameCamera: {fileID: 1460279231594847641, guid: c0d7f2c83c231a640a2032cc3873b5bf, type: 3}
   areaStartOffset: -10
   areaEndOffset: 5
+  earlyTerrainTemplates: []
 --- !u!1 &1389768192496985770
 GameObject:
   m_ObjectHideFlags: 0

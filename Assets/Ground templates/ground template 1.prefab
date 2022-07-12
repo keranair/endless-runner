@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8861308915879948979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.1, y: -2.87, z: 10.184428}
+  m_LocalPosition: {x: -4.099, y: -2.87, z: 10.184428}
   m_LocalScale: {x: 1.5942, y: 1.5942, z: 1.5942}
   m_Children: []
   m_Father: {fileID: 8861308917137811323}
@@ -135,7 +135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8861308916229206709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0600004, y: -2.87, z: 10.184428}
+  m_LocalPosition: {x: -2.07, y: -2.87, z: 10.184428}
   m_LocalScale: {x: 1.5942, y: 1.5942, z: 1.5942}
   m_Children: []
   m_Father: {fileID: 8861308917137811323}
@@ -227,10 +227,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8861308917137811323}
-  - component: {fileID: 8861308917137811327}
   - component: {fileID: 8861308917137811325}
   - component: {fileID: 8861308917137811322}
-  - component: {fileID: 8861308917137811324}
+  - component: {fileID: 5859551273302101789}
+  - component: {fileID: -2400643637068026938}
   m_Layer: 0
   m_Name: ground template 1
   m_TagString: Untagged
@@ -256,23 +256,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8861308917137811327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8861308917137811320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e7aeb2cfff7a6439eb33e37c9bc12a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainTemplates: []
-  terrainTemplateWidth: 0
-  mainCamera: {fileID: 0}
-  areaStartOffset: 0
-  areaEndOffset: 0
 --- !u!50 &8861308917137811325
 Rigidbody2D:
   serializedVersion: 4
@@ -316,7 +299,7 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
---- !u!114 &8861308917137811324
+--- !u!114 &5859551273302101789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,15 +308,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 8861308917137811320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e7aeb2cfff7a6439eb33e37c9bc12a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3301c54b69dd685439ed7ca59dfb5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2400643637068026938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861308917137811320}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29800cacdb7567b4a95fac9fbb802a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   terrainTemplates:
-  - {fileID: 8861308917137811327}
-  terrainTemplateWidth: 0
-  mainCamera: {fileID: 1460279231594847641, guid: c0d7f2c83c231a640a2032cc3873b5bf, type: 3}
+  - {fileID: 5859551273302101789}
+  terrainTemplateWidth: 8.89
+  gameCamera: {fileID: 1460279231594847641, guid: c0d7f2c83c231a640a2032cc3873b5bf, type: 3}
   areaStartOffset: -10
   areaEndOffset: 5
+  earlyTerrainTemplates:
+  - {fileID: 5859551273302101789}
 --- !u!1 &8861308917379562049
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,8 +18,19 @@ public class CharacterMoveController : MonoBehaviour
     public float groundRaycastDistance;
     public LayerMask groundLayerMask;
 
+    [Header("Scoring")]
+    public ScoreController score;
+    public float scoringRatio;
+    private float lastPositionX;
+
+    [Header("GameOver")]
+    public float fallPositionY;
+    public GameObject gameOverScreen;
+
     private Animator anim;
     private CharacterSoundController sound;
+    public Camera gameCamera;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +79,33 @@ public class CharacterMoveController : MonoBehaviour
             }
         }
         anim.SetBool("isOnGround", isOnGround);
+
+        // calculate score
+
+        int distancePassed = Mathf.FloorToInt(transform.position.x - lastPositionX);
+        int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
+        if (scoreIncrement > 0)
+        {
+            score.IncreaseCurrentScore(scoreIncrement);
+            lastPositionX += distancePassed;
+        }
+
+        if (transform.position.y < fallPositionY)
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        // set high score
+        score.FinishScoring();
+        // stop camera movement
+        gameCamera.enabled = false;
+        // show gameover
+        gameOverScreen.SetActive(true);
+        // disable this too
+        this.enabled = false;
     }
 
     private void OnDrawGizmos()
